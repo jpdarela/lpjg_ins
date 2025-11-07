@@ -1,0 +1,39 @@
+{
+	"name": "lpjg-insfile-language-support",
+	"publisher": "darel",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yourusername/lpjg-insfile-language-support.git"
+	},
+
+	"contributes": {
+		"languages": [
+			{
+				"id": "lpjg_ins",
+				"aliases": [
+					"LPJG-Insfile",
+					"insfile"
+				],
+				"extensions": [
+					".ins"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "lpjg_ins",
+				"scopeName": "source.lpjg_ins",
+				"path": "./syntaxes/grammar.json"
+			}
+		]
+	},
+	"__metadata": {
+		"size": 2397
+	}
+}

@@ -1,0 +1,41 @@
+{
+    "name": "lpjg_ins",
+    "scopeName": "source.lpjg_ins",
+    "patterns": [
+        {
+            "name": "comment.line.excl.lpjg_ins",
+            "match": "(!).*",
+            "captures": {
+                "1": { "name": "punctuation.definition.comment.lpjg_ins" }
+            }
+        },
+        {
+            "name": "string.quoted.double.lpjg_ins",
+            "match": "\"([^\"]*)\"",
+            "captures": {
+                "0": { "name": "string.quoted.double.lpjg_ins" }
+            }
+        },
+        {
+            "name": "string.quoted.lpjg_ins",
+            "match": "\\'([^\\']*)\\'",
+            "captures": {
+                "0": { "name": "string.quoted.lpjg_ins" }
+            }
+        },
+        {
+            "name": "keyword.operator.assignment.lpjg_ins",
+            "match": "(^param|^title|^st|^pft|^group|^import|str)\\s",
+            "captures": {
+                "1": { "name": "keyword.operator.assignment.lpjg_ins" }
+            }
+        },
+        {
+            "name": "constant.numeric.lpjg_ins",
+            "match": "\\b(-?\\d*\\.?\\d+)\\b",
+            "captures": {
+                "1": { "name": "constant.numeric.lpjg_ins" }
+            }
+        }
+    ]
+}
