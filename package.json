@@ -1,7 +1,7 @@
 {
 	"name": "lpjg-insfile-language-support",
 	"publisher": "darel",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.63.0"
 	},
@@ -34,6 +34,13 @@
 				"language": "lpjg_ins",
 				"scopeName": "source.lpjg_ins",
 				"path": "./syntaxes/grammar.json"
+			}
+		],
+		"iconThemes": [
+			{
+				"id": "lpjg-ins-icons",
+				"label": "LPJG Ins File Icons",
+				"path": "./fileicons/lpjg-ins-icon-theme.json"
 			}
 		]
 	},

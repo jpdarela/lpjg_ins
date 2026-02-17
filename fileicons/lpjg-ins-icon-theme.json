@@ -1,0 +1,24 @@
+{
+	"hidesExplorerArrows": false,
+	"iconDefinitions": {
+		"_ins_lpjg_light": {
+			"iconPath": "../icons/ins-icon-light.png"
+		},
+		"_ins_lpjg_dark": {
+			"iconPath": "../icons/ins-icon-dark.png"
+		}
+	},
+	"fileExtensions": {
+		"ins": "_ins_lpjg_light"
+	},
+	"light": {
+		"fileExtensions": {
+			"ins": "_ins_lpjg_light"
+		}
+	},
+	"highContrast": {
+		"fileExtensions": {
+			"ins": "_ins_lpjg_dark"
+		}
+	}
+}
