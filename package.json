@@ -1,9 +1,9 @@
 {
 	"name": "lpjg-insfile-language-support",
 	"publisher": "darel",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
-		"vscode": "^1.0.0"
+		"vscode": "^1.63.0"
 	},
 
 	"repository": {
@@ -22,6 +22,10 @@
 				"extensions": [
 					".ins"
 				],
+				"icon": {
+					"light": "./icons/ins-icon-light.png",
+					"dark": "./icons/ins-icon-dark.png"
+				},
 				"configuration": "./language-configuration.json"
 			}
 		],
