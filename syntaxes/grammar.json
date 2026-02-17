@@ -3,6 +3,17 @@
     "scopeName": "source.lpjg_ins",
     "patterns": [
         {
+            "comment": "Double-quoted strings (matched first to protect contents from comment/keyword rules)",
+            "name": "string.quoted.double.lpjg_ins",
+            "match": "\"([^\"]*)\""
+        },
+        {
+            "comment": "Single-quoted strings",
+            "name": "string.quoted.single.lpjg_ins",
+            "match": "'([^']*)'"
+        },
+        {
+            "comment": "Line comments starting with !",
             "name": "comment.line.excl.lpjg_ins",
             "match": "(!).*",
             "captures": {
@@ -10,31 +21,34 @@
             }
         },
         {
-            "name": "string.quoted.double.lpjg_ins",
-            "match": "\"([^\"]*)\"",
+            "comment": "Structural keywords: param, title, st, pft, group, import",
+            "match": "^\\s*(param|title|st|pft|group|import)\\b",
             "captures": {
-                "0": { "name": "string.quoted.double.lpjg_ins" }
+                "1": { "name": "keyword.control.lpjg_ins" }
             }
         },
         {
-            "name": "string.quoted.lpjg_ins",
-            "match": "\\'([^\\']*)\\'",
-            "captures": {
-                "0": { "name": "string.quoted.lpjg_ins" }
-            }
+            "comment": "Block delimiters ( )",
+            "name": "punctuation.section.block.lpjg_ins",
+            "match": "[()]"
         },
         {
-            "name": "keyword.operator.assignment.lpjg_ins",
-            "match": "(^param|^title|^st|^pft|^group|^import|str)\\s",
-            "captures": {
-                "1": { "name": "keyword.operator.assignment.lpjg_ins" }
-            }
-        },
-        {
+            "comment": "Numeric literals including scientific notation (e.g. 1.477E-06, -3.0)",
             "name": "constant.numeric.lpjg_ins",
-            "match": "\\b(-?\\d*\\.?\\d+)\\b",
+            "match": "-?\\b\\d*\\.?\\d+(?:[eE][+-]?\\d+)?\\b"
+        },
+        {
+            "comment": "Parameter names: identifier followed by a value (string or number)",
+            "match": "^\\s*([a-zA-Z_][a-zA-Z0-9_]*)\\s+(?=\"|'|-?[\\d.])",
             "captures": {
-                "1": { "name": "constant.numeric.lpjg_ins" }
+                "1": { "name": "variable.parameter.lpjg_ins" }
+            }
+        },
+        {
+            "comment": "Bare group references: indented identifier alone on a line (or before a comment)",
+            "match": "^\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=!|$)",
+            "captures": {
+                "1": { "name": "entity.name.tag.lpjg_ins" }
             }
         }
     ]
